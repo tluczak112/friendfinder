@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+        <script   src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/844766976f.js"></script>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <style>
+            .navbar{
+              margin-bottom: 0;
+              border-radius:0;
+              background-color:maroon;
+              color: #fff;
+              padding:1% 0;
+              font-size:1.2em;
+              border:0;
+            }
+            
+            .navbar-brand {
+              float:left;
+              min-height:55px;
+              padding:0 15px 5px;
+            }
+            
+            .navbar-inverse .navbar-nav .active a,.navbar-inverse .navbar-nav .active a:focus,.navbar-inverse .navbar-nav .active a:hover {
+              color:#fff;
+              background-color:maroon;
+            }
+            .navbar-inverse .navbar-nav li a{
+              color:#d5d5d5;
+            }
+           
+            .btn {
+              font-size:18px;
+              color:white;
+              padding:12px 22px;
+              background:maroon;
+              border:2px solid  white;
+            }
+            
+            .container {
+              margin: 4% auto;
+            }
+            
+            #icon {
+              max-width: 200px;
+              margin: 1% auto;
+            }
+            
+            @media (max-width: 640px) {
+              .carousel-caption{
+                display:none;
+              }
+              #icon {
+                max-width:150px;
+              }
+              h2 {
+                font-size:1.7em;
+                text-align: center;
+              }
+              h1 {
+                  text-align: center;
+                  font-family: "Comic Sans";
+              }
+            }
+              </style>
+    </head>
+    <title> Friend Finder</title> 
+    
+    <body>
+            <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                           <button type ="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                              </button>
+                              <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-send"></span></a>
+                           </div>
+                            <div class="collapse navbar-collapse" id="myNavbar">
+                              <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="/survey">Home</a></li>
+                                <li class="active"><a href="/api/friends">Friends List</a></li>
+                                <li class="active"><a href="#">Contact</a></li>
+                              </ul>
+                
+                            </div>
+                      </div>
+                </nav>
+
+                <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                    <h1>The Most Important Test of Your Life</h1>
+                                    <div class="divider text-center"></div>
+            
+                                    <h3>About You, Yourself, and Yours</h3>
+            
+                                    <div class="input-field col s6">
+                                        <h5>Enter Thine Nom</h5>
+                                        <input type="text" class="validate" placeholder="Your Name Here" id="userName">
+                                    </div>
+            
+                                    <div class="input-field col s6">
+                                        <h5>Upload Yo Mug Here</h5>
+                                        <input type="text" class="validate" placeholder="Upload" id="userPhoto">
+                                    </div>
+<!-- // Survey Questions -->
+                                    <div class="input-field col s12">
+                                        <h3>Question 1</h3>
+                                        <h4>Do you like to eat a lot of cheese produced solely by goats?</h4>
+                                        <select id="question1">
+                                            <option value="" disabled selected>What is thine choice?</option>
+                                            <option value="1">1 (Strongely Agree and Disagree at the same time)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Partially yet not partially Strongely Agree to Disagree at the lesser than time)</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="input-field col s12">
+                                        <h3>Question 2</h3>
+                                        <h4>When you wake up in the morning, do you get cranky when you notice the lice in your sheets?</h4>
+                                        <select id="question2">
+                                            <option value="" disabled selected>What is thine choice?</option>
+                                            <option value="1">1 (Strongely Agree and Disagree at the same time)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Partially yet not partially Strongely Agree to Disagree at the lesser than time)</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="input-field col s12">
+                                        <h3>Question 3</h3>
+                                        <h4>If you find HIV inside of your shower cap, do you usually burn it with Lemon Pledge?</h4>
+                                        <select id="question3">
+                                            <option value="" disabled selected>What is thine choice?</option>
+                                            <option value="1">1 (Strongely Agree and Disagree at the same time)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Partially yet not partially Strongely Agree to Disagree at the lesser than time)</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="input-field col s12">
+                                        <h3>Question 4</h3>
+                                        <h4> Do you like to taste food but then also chew on it.</h4>
+                                        <select id="question4">
+                                            <option value="" disabled selected>What is thine choice?</option>
+                                            <option value="1">1 (Strongely Agree and Disagree at the same time)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Partially yet not partially Strongely Agree to Disagree at the lesser than time)</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="input-field col s12">
+                                        <h3>Question 5</h3>
+                                        <h4>Do you find happiness in yelling at your favorite bottle of Advil liqui-gels?  </h4>
+                                        <select id="question5">
+                                            <option value="" disabled selected>What is thine choice?</option>
+                                            <option value="1">1 (Strongely Agree and Disagree at the same time)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Partially yet not partially Strongely Agree to Disagree at the lesser than time)</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="input-field col s12">
+                                        <h3>Question 6</h3>
+                                        <h4>When you break your eye socket, do you tell your grandmama all the secrets of your secret childhood lover?</h4>
+                                        <select id="question6">
+                                            <option value="" disabled selected>What is thine choice?</option>
+                                            <option value="1">1 (Strongely Agree and Disagree at the same time)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Partially yet not partially Strongely Agree to Disagree at the lesser than time)</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="input-field col s12">
+                                        <h3>Question 7</h3>
+                                        <h4>When staring into the void, what do you see?</h4>
+                                        <select id="question7">
+                                            <option value="" disabled selected>What is thine choice?</option>
+                                            <option value="1">1 (Strongely Agree and Disagree at the same time)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Partially yet not partially Strongely Agree to Disagree at the lesser than time)</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="input-field col s12">
+                                        <h3>Question 8</h3>
+                                        <h4>How sad can you get while swimming on the inside of a printer cartride while lapping up high volumes of cyan ink.</h4>
+                                        <select id="question8">
+                                            <option value="" disabled selected>What is thine choice?</option>
+                                            <option value="1">1 (Strongely Agree and Disagree at the same time)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Partially yet not partially Strongely Agree to Disagree at the lesser than time)</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="input-field col s12">
+                                        <h3>Question 9</h3>
+                                        <h4>Do you think that 9/11 did Bush?</h4>
+                                        <select id="question9">
+                                            <option value="" disabled selected>What is thine choice?</option>
+                                            <option value="1">1 (Strongely Agree and Disagree at the same time)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Partially yet not partially Strongely Agree to Disagree at the lesser than time)</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="input-field col s12">
+                                        <h3>Question 10</h3>
+                                        <h4>Do you like cats or dogs?</h4>
+                                        <select id="question10">
+                                            <option value="" disabled selected>What is thine choice?</option>
+                                            <option value="1">1 (Cats/Dogs)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3 (Catdog)</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Dogs/Cats)</option>
+                                        </select>
+                                    </div>
+            
+                                    <br>
+                 <!-- Survey Submit Button -->
+                                    <div>
+                                        <button class="btn" type="submit" name="action" id="submitButton">Submit to me!!!!
+                                        </button>
+              <!-- Ran out of time tring to make javascript     -->
+         
+
+<body>
+
+    
+</body>
+</html>
